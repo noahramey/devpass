@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   get '/vault' => 'users#vault'
+
+  resources :accounts
 end
