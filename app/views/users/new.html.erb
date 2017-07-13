@@ -1,13 +1,13 @@
-<h2>Sign Up!</h2>
+<p>Text Editor Sign Up</p>
 <%= form_for :user, url: '/users' do |f| %>
-  <span class="comment">{</span>
-  <p>"name" : <span class="quotes">"</span><span class=""<%= f.text_field :name %><span class="quotes">"</span><span class="comment"> // ex: john smith</span></p>
+  <span class="red">"sign_up"</span> : <span class="comment">{</span>
+  <p>"name" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john smith</span></p>
 
-  <p>"email" : <span class="quotes">"</span><%= f.text_field :email %><span class="quotes">"</span><span class="comment"> // ex: john@email.com</span></p>
+  <p>"email" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john@email.com</span></p>
 
-  <p>"password" : <span class="quotes">"</span><%= f.password_field :password %><span class="quotes">"</span><span class="comment"> // 8+ characters</span></p>
+  <p>"password" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // 8+ characters</span></p>
 
-  <p>"confirm" : <span class="quotes">"</span><%= f.password_field :password_confirmation %><span class="quotes">"</span><span class="comment"> // password again</span></p>
+  <p>"confirm" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span><span class="comment"> // password again</span></p>
 
   <!-- <%= f.submit "Sign Up" %> -->
   <span class="comment">}</span>

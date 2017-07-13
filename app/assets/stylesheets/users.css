@@ -5,7 +5,7 @@ body {
   line-height: 1.5;
   padding: 4em 1em;
   color: #566b78;
-  background: #eee;
+  background: rgb(40, 44, 52);
 }
 
 h2 {
@@ -20,7 +20,6 @@ h1, h2, strong {
 form {
   background: rgb(40, 44, 52);
   padding: 1.5em;
-  border-bottom: 1px solid #d8dee9;
   border-left: 2px solid #69c;
   font-size: 1.6em;
 
@@ -32,7 +31,7 @@ a {
 
 /* FORM STYLES */
 
-input[type="text"],
+/*input[type="text"],
 input[type="password"] {
   padding: 10px;
   border: 0;
@@ -45,13 +44,7 @@ input[type="text"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
   outline: none;
-}
-
-input::-webkit-input-placeholder {
-  color: #528bff;
-  text-shadow: none;
-  -webkit-text-fill-color: initial;
-}
+}*/
 
 .comment {
   /*color: #a7adba;*/
@@ -60,9 +53,32 @@ input::-webkit-input-placeholder {
 
 form p {
   color: rgb(224, 108, 117);
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .quotes {
   color: rgb(152, 195, 121);
+}
+
+/* CURSOR ATTEMPT */
+
+.textInput {
+  color: transparent;
+  background-color: rgb(40, 44, 52);
+  text-shadow: 0 0 0 rgb(152, 195, 121);
+  border-right: 2px solid transparent;
+}
+.textInput:focus {
+  animation: PulseAttention 2s cubic-bezier(.215, .61, .355, 1) forwards infinite;
+  outline: none;
+}
+
+@keyframes PulseAttention {
+  50% {
+    border-color: #528bff;
+  }
+}
+
+.red {
+  color: rgb(224, 108, 117);
 }
