@@ -1,14 +1,41 @@
 <p>Text Editor Sign Up</p>
-<%= form_for :user, url: '/users' do |f| %>
-  <span class="red">"sign_up"</span> : <span class="comment">{</span>
-  <p>"name" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john smith</span></p>
+<form action="/users" accept-charset="UTF-8" method="post">
+  <span class="red">"sign_up"</span> : {
+  <p><span class="variable">"name"</span> : <span class="quotes">"</span><span class="textInput" id="name-input" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john smith</span></p>
 
-  <p>"email" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john@email.com</span></p>
+  <p><span class="variable">"email"</span> : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // ex: john@email.com</span></p>
 
-  <p>"password" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // 8+ characters</span></p>
+  <p><span class="variable">"password"</span> : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span>,<span class="comment"> // 8+ characters</span></p>
 
-  <p>"confirm" : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span><span class="comment"> // password again</span></p>
+  <p><span class="variable">"confirm"</span> : <span class="quotes">"</span><span class="textInput" contenteditable="true"></span><span class="quotes">"</span><span class="comment"> // password again</span></p>
 
-  <!-- <%= f.submit "Sign Up" %> -->
-  <span class="comment">}</span>
-<% end %>
+  }
+</form>
+
+<script type="text/javascript">
+  $(function() {
+    $('[contenteditable]').on('focus', function() {
+      var $this = $(this);
+      $this.data('before', $this.html());
+      return $this;
+    }).on('blur keyup paste', function() {
+      var $this = $(this);
+      if ($this.data('before') !== $this.html()) {
+        $this.data('before', $this.html());
+        $this.trigger('change');
+      }
+      return $this;
+    });
+    // var observer = new MutationSummary({
+    //   rootNode: $("#name-input")[0],
+    //   queries: [{ characterData: true }],
+    //   callback: function(summaries) {
+    //     console.log('observer: ' + $(summaries[0].target).html());
+    //   }
+    // });
+    // $("#name-input").bind('change', function() {
+    //   console.log($(this).html());
+    // });
+
+  });
+</script>
