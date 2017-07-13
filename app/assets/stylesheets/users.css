@@ -54,6 +54,10 @@ form p .variable {
   outline: none;
 }
 
+#pass-input, #conf-input {
+  -webkit-text-security: disc;
+}
+
 @keyframes PulseAttention {
   50% {
     border-color: #528bff;
