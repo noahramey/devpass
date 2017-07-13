@@ -12,35 +12,6 @@
   <p><span class="variable">"password"</span> : <span class="quotes">"</span><span class="textInput" id="pass-input" contenteditable="true" name="password"></span><span class="quotes">"</span>,<span class="comment"> // 8+ characters</span></p>
 
   <p><span class="variable">"confirm"</span> : <span class="quotes">"</span><span class="textInput" id="conf-input" contenteditable="true" name="password_confirmation"></span><span class="quotes">"</span><span class="comment"> // password again</span></p>
-
+  <%= f.submit "sign up" %>
   }
 <% end %>
-
-<script type="text/javascript">
-  $(function() {
-    $('#name-input').focus();
-    $('[contenteditable]').on('focus', function() {
-      var $this = $(this);
-      $this.data('before', $this.html());
-      return $this;
-    }).on('blur keyup paste', function() {
-      var $this = $(this);
-      if ($this.data('before') !== $this.html()) {
-        $this.data('before', $this.html());
-        $this.trigger('change');
-      }
-      return $this;
-    });
-    var observer = new MutationSummary({
-      rootNode: $("form#user_form")[0],
-      queries: [{ characterData: true }],
-      callback: function(summaries) {
-        var field = summaries[0].target.activeElement.attributes['name'].value;
-        var selector = $("#user_" + field);
-        selector.val($(summaries[0].target.activeElement).html());
-        console.log(selector.val());
-      }
-    });
-
-  });
-</script>
