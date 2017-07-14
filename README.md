@@ -1,24 +1,36 @@
-# README
+![Random Lock Logo](./app/assets/images/lock-icon.png)
+# DevPass (Work in Progress)
+> Password Manager for Developers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DevPass is a password manager made specifically with Developers in mind. As of right now, this is mainly for practice using a languages without relying on many frameworks. Styled to look like the [Atom text editor](https://github.com/atom/atom) with the "One Dark" [UI](https://github.com/atom/one-dark-ui) and [Syntax](https://github.com/atom/one-dark-syntax) themes.
 
-Things you may want to cover:
+## Installing / Getting started
 
-* Ruby version
+There is no live version currently, so be sure to clone, setup the database locally (PostgreSQL required), and start the server.
 
-* System dependencies
+```
+$ git clone https://github.com/noahramey/devpass.git
+$ cd devpass/
+$ rails db:create db:migrate
+$ rails s
+```
 
-* Configuration
+The application will be available at [localhost:3000](http://localhost:3000).
 
-* Database creation
+## Developing
 
-* Database initialization
+### Built With
+* Ruby on Rails [GitHub](https://github.com/rails/rails)
+* CoffeeScript [GitHub](https://github.com/jashkenas/coffeescript)
+* jQuery [GitHub](https://github.com/jquery/jquery)
+* Mutation Summary Library [GitHub](https://github.com/rafaelw/mutation-summary)
+* CSS3
 
-* How to run the test suite
+### Prerequisites
+Ruby 2.4.1, Rails 5.1+, PostgreSQL 9.6.3
 
-* Services (job queues, cache servers, search engines, etc.)
+### Tests
+Work in Progress.
 
-* Deployment instructions
-
-* ...
+### Licensing
+This project is released under the [MIT License](https://opensource.org/licenses/MIT)
