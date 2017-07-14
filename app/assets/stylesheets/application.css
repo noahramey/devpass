@@ -12,7 +12,6 @@
 
 body {
   margin: 0 auto;
-  max-width: 60em;
   font-family: "Menlo", "Arial", sans-serif;
   line-height: 1.5;
   padding: 4em 1em;
@@ -27,4 +26,75 @@ h2 {
 
 h1, h2, strong {
   color: #333;
+}
+
+/* GRID SYSTEM */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 10%;
+  padding: 12px;
+}
+
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 30%;}
+.col-4 {width: 40%;}
+.col-5 {width: 50%;}
+.col-6 {width: 60%;}
+.col-7 {width: 70%;}
+.col-8 {width: 80%;}
+.col-9 {width: 90%;}
+.col-10 {width: 100%;}
+
+
+@media all and (max-width:800px) {
+  .col-1 {width: 20%;}
+  .col-2 {width: 40%;}
+  .col-3 {width: 60%;}
+  .col-4 {width: 80%;}
+  .col-5 {width: 100%;}
+  .col-6 {width: 100%;}
+  .col-7 {width: 100%;}
+  .col-8 {width: 100%;}
+  .col-9 {width: 100%;}
+  .col-10 {width: 100%;}
+
+  .row .col-3:last-of-type{
+    width: 100%;
+  }
+
+  .row .col-9 ~ .col-1 {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 650px){
+  .col-1{ width: 50%;}
+  .col-2{ width: 100%;}
+  .col-3{ width: 100%;}
+  .col-4{ width: 100%;}
+  .col-5{ width: 100%;}
+  .col-6{ width: 100%;}
+  .col-7{ width: 100%;}
+  .col-8{ width: 100%;}
+  .col-9{ width: 100%;}
+  .col-10{ width: 100%;}
+}
+
+.main {
+  border-left: 2px solid #69c;
 }
