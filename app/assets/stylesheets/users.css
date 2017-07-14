@@ -1,7 +1,6 @@
 form {
   background: rgb(40, 44, 52);
   padding: 1.5em;
-  /*border-left: 2px solid #69c;*/
   font-size: 1.6em;
 }
 
@@ -36,7 +35,7 @@ form p .variable {
   outline: none;
 }
 
-#pass-input, #conf-input {
+#pass-input, #confirmation-input {
   -webkit-text-security: disc;
 }
 

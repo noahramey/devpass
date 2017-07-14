@@ -1,7 +1,11 @@
-<h1>Login</h1>
+<%= form_tag '/login', id: "login-form" do %>
+  <%= hidden_field_tag :email %>
+  <%= hidden_field_tag :password %>
+  <span class="red">"log_in"</span> : {
+  <p><span class="variable">"email"</span> : <span class="quotes">"</span><span class="textInput" id="email-input" contenteditable="true" name="email"></span><span class="quotes">"</span>,<span class="comment"> // master email</span></p>
 
-<%= form_tag '/login' do %>
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Log In" %>
+  <p><span class="variable">"password"</span> : <span class="quotes">"</span><span class="textInput" id="pass-input" contenteditable="true" name="password"></span><span class="quotes">"</span>,<span class="comment"> // master password</span></p>
+
+  <p><span class="comment">// Press Enter to Log In</span></p>
+  }
 <% end %>
