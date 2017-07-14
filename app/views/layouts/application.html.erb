@@ -12,7 +12,16 @@
     <div class="container">
       <div class="row">
         <div class="col-2">
-
+          <ul class="nav-tree">
+            <% if @current_user %>
+              <li><a href="#">Vault</a></li>
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Etc</a></li>
+            <% else %>
+              <li><%= link_to "Sign Up", '/signup' %></li>
+              <li><%= link_to "Log In", '/login' %></li>
+            <% end %>
+          </ul>
         </div>
         <div class="col-8 main">
           <%= yield %>

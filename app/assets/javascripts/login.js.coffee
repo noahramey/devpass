@@ -18,7 +18,6 @@ $(".sessions.new").ready ->
   observer = new MutationSummary(
     queries: [ { characterData: true } ]
     callback: (summaries) ->
-      console.log(summaries[0]);
       field = summaries[0].target.activeElement.attributes['name'].value
       selector = $('#' + field)
       selector.val $(summaries[0].target.activeElement).html()
