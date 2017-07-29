@@ -8,7 +8,7 @@
             <p><span class="red">"<%= account.name %>"</span> : {</p>
             <p><span class="variable">"username"</span> : <span class="quotes">"<%= account.username %>"</span>,</p>
             <p><span class="variable">"email"</span> : <span class="quotes">"<%= account.email %>"</span>,</p>
-            <p><span class="variable">"password_digest"</span> : <span class="quotes">"<%= account.password_digest %>"</span></p>
+            <p><span class="variable">"password_digest"</span> : <span class="quotes">"<%= account.password %>"</span></p>
           </div>
           <% if @user.accounts.last == account %>
             }
